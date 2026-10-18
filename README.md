@@ -4,9 +4,9 @@ Official public **beta** builds for **Vencade Studios Launcher**, with an option
 
 ## Download for Windows 10/11 x64
 
-**[Download Vencade Studios Launcher v0.2.1](https://github.com/Venturinii/vencade-downloads/releases/download/v0.2.1/Vencade-Studios-Launcher-Setup-0.2.1.exe)** (approximately 93 MB)
+**[Download Vencade Studios Launcher v0.2.2](https://github.com/Venturinii/vencade-downloads/releases/download/v0.2.2/Vencade-Studios-Launcher-Setup-0.2.2.exe)** (approximately 93 MB)
 
-New in v0.2.1: select a game from the left menu to open its details on the right. Install Dojo Raiders to the default folder or choose another Windows folder. A progress bar now reports download and extraction; the launcher stays responsive and installation errors remain visible. Once installed, **Install** switches to **Play**.
+New in v0.2.2: game ZIP extraction now uses a streaming extractor (fixes the previously reported ENOENT/chmod error on resources/app.asar). The default Dojo Raiders folder is now `Games/Dojo Raiders` inside the launcher installation directory (normally on the Windows C: drive), unless the user chooses another folder. Future launcher updates include game-folder preservation.\n\nIntroduced in v0.2.1: select a game from the left menu to open its details on the right. Install Dojo Raiders to the default folder or choose another Windows folder. A progress bar now reports download and extraction; the launcher stays responsive and installation errors remain visible. Once installed, **Install** switches to **Play**.
 
 After installing:
 1. Start **Vencade Studios Launcher**.
@@ -33,7 +33,7 @@ The launcher checks the **latest stable** GitHub Release for mandatory launcher 
 
 When a new Dojo Raiders version is released, the client installed on your PC will display **Atualizar / Update** and cannot be launched through the launcher before updating. No need to reinstall every game.
 
-Current initial versions: **Launcher v0.2.1** and **Dojo Raiders Client v0.1.0**.
+Current initial versions: **Launcher v0.2.2** and **Dojo Raiders Client v0.1.0**.
 
 ## Release files and security
 
@@ -41,7 +41,7 @@ Dojo Raiders game ZIP: [Dojo Raiders Client v0.1.0](https://github.com/Venturini
 
 Game ZIP SHA-256: `800ab97cda7c7a0d9b1de022bb98e35a5a2b51737185d8b3ea92ef98df50c4eb`
 
-Launcher installer SHA-256: `4a99432a44985f4d341f1997c01328acbe715c45461040104e35022a0f85b419`
+Launcher installer SHA-256: `fc25a6f280e822f9a00771f276d989acbcc72f48012527cdccef72e5dbe93493`
 
 The public repo contains only release binaries, manifests and documentation — no private source code, Twitch secrets, signing keys, personal access tokens or MongoDB data.
 
