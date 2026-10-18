@@ -2,7 +2,12 @@
   "schema": 1,
   "games": {
     "dojoRaiders": {
-      "available": false
+      "available": true,
+      "version": "0.1.0",
+      "minLauncherVersion": "0.2.0",
+      "executable": "Dojo Raiders.exe",
+      "sha256": "800ab97cda7c7a0d9b1de022bb98e35a5a2b51737185d8b3ea92ef98df50c4eb",
+      "url": "https://github.com/Venturinii/vencade-downloads/releases/download/dojo-raiders-client-v0.1.0/Dojo-Raiders-Client-0.1.0-win-x64.zip"
     },
     "elevenCup": {
       "available": false
