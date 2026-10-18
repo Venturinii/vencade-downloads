@@ -1,45 +1,46 @@
 # Vencade Studios — Downloads
 
-Public download distribution for the **Vencade Studios Launcher**, separate from the private source repository. This repository contains only public download metadata, instructions and (after approval) Windows installer assets.
+Official public **beta** builds for **Vencade Studios Launcher**, with an optional Dojo Raiders Windows client. The source code stays in the private `Venturinii/vencade-launcher` repository.
 
-**STATUS: PRE-LAUNCH. NO PUBLIC INSTALLERS YET.** Please do not download unverified binaries or announce a public launch.
+## Download for Windows 10/11 x64
 
-## Games and catalog
+**[Download Vencade Studios Launcher v0.2.0](https://github.com/Venturinii/vencade-downloads/releases/download/v0.2.0/Vencade-Studios-Launcher-Setup-0.2.0.exe)** (approximately 93 MB)
 
-The public catalog is at [catalog/catalog.json](catalog/catalog.json).
+After installing:
+1. Start **Vencade Studios Launcher**.
+2. Choose **Português (BR)** or **English (US)**.
+3. Find **Dojo Raiders** and click **Instalar / Install**. It downloads only the Dojo Raiders client (approximately 357 MB).
+4. Click **Jogar / Play**. The Dojo Raiders client opens as a separate Windows application, using the existing online website/server.
+5. **Eleven Cup** is visible as *Em desenvolvimento / In development*, but cannot yet be installed.
 
-- **Dojo Raiders:** separate, optional Windows client, presently **not available for public installation** (`dojoRaiders.available=false`).
-- **Eleven Cup:** listed as *Em desenvolvimento / In development*; no installer (`elevenCup.available=false`).
-- Users install the **launcher only** first and choose which games to install after they become available.
-- The launcher checks stable GitHub Releases for its own required updates; games are updated independently using the public catalog.
+**[Releases and versions](https://github.com/Venturinii/vencade-downloads/releases)**
 
-## Planned Windows artifacts
+## Public beta notice
 
-When the owner approves release, two distinct GitHub Releases will be used:
+These are **unsigned Windows builds**. Windows SmartScreen and antivirus products may display warnings. Install only from this official release and inspect the publisher information and download integrity; if uncertain, do not proceed. Twitch login inside the desktop client and OBS capture have not yet passed end-to-end Windows testing. Players are testing these capabilities through the public beta.
 
-| Artifact | Release tag | GitHub release setting |
-| --- | --- | --- |
-| Vencade Studios Launcher Setup `.exe` + `latest.yml` (+ optional blockmap) | `v0.2.0` | **Stable**, after QA |
-| Dojo Raiders Client `.zip` | `dojo-raiders-client-v0.1.0` | **Pre-release** (not latest stable) |
+Please report login, installation or update issues to Vencade Studios. Do not use this early beta as your sole setup for an important live stream.
 
-The developer can build the files privately in [`Venturinii/vencade-launcher`](https://github.com/Venturinii/vencade-launcher), then invoke **Prepare public release drafts (manual QA only)** in the *private* repository. It requires a fine-grained token stored as a GitHub Actions secret there, authorized **only** for this public repository with Contents write permission. This creates **draft releases**, not public downloads, and does not enable the catalog.
+Dojo Raiders is **online-only**, and requires access to `dojoraiders.com` and Twitch. It does not install the game backend or Twitch credentials onto your computer.
 
-**Do not paste access tokens into this public repository, source files, PR descriptions, release notes or ChatGPT.**
+## Updates
 
-## Activation after testing
+The launcher checks the **latest stable** GitHub Release for mandatory launcher updates. Until those are installed it blocks the game. Each game checks [catalog/catalog.json](catalog/catalog.json) separately:
+- `dojoRaiders.available=true`: public beta downloadable separately.
+- `elevenCup.available=false`: in development.
 
-1. Test installation on Windows 10/11, Twitch OAuth login, OBS capture, install/uninstall, forced version updates, network failure and file-integrity checks.
-2. Review Windows code-signing before distribution; current private test builds are **unsigned**.
-3. Promote the approved launcher draft to a **stable** public release and separately publish the Dojo client as **pre-release**.
-4. Verify the actual release files download anonymously and match the generated SHA-256.
-5. Only then change [catalog/catalog.json](catalog/catalog.json) from `dojoRaiders.available=false` to `true` and insert the **real** version, executable name, public release URL, minimum launcher version and matching SHA-256. Never insert guessed URLs or hashes.
-6. Validate that outdated versions block Play until the required update finishes. Leave Eleven Cup unavailable.
+When a new Dojo Raiders version is released, the client installed on your PC will display **Atualizar / Update** and cannot be launched through the launcher before updating. No need to reinstall every game.
 
-## Security and scope
+Current initial versions: **Launcher v0.2.0** and **Dojo Raiders Client v0.1.0**.
 
-- The Dojo client is an installed Windows application that uses the existing **online** Dojo Raiders service; it is **not** an offline server.
-- Twitch authentication inside Electron has **not** passed end-to-end Windows validation. Do not promise compatibility yet.
-- No private source code, OAuth credential, MongoDB URI, certificates or signing keys may be stored here.
-- A successful GitHub Actions build is **not** equivalent to a safe public release. Review and owner's approval are required.
+## Release files and security
+
+Dojo Raiders game ZIP: [Dojo Raiders Client v0.1.0](https://github.com/Venturinii/vencade-downloads/releases/tag/dojo-raiders-client-v0.1.0)
+
+Game ZIP SHA-256: `800ab97cda7c7a0d9b1de022bb98e35a5a2b51737185d8b3ea92ef98df50c4eb`
+
+Launcher installer SHA-256: `5abec38195cbdfccab5c7f2b61322512adf6553351f7794cc79d7015675afb53`
+
+The public repo contains only release binaries, manifests and documentation — no private source code, Twitch secrets, signing keys, personal access tokens or MongoDB data.
 
 © Vencade Studios. All rights reserved.
