@@ -4,11 +4,11 @@
     "dojoRaiders": {
       "available": true,
       "packageFormat": "nsis",
-      "version": "0.1.2",
-      "minLauncherVersion": "0.3.0",
+      "version": "0.1.3",
+      "minLauncherVersion": "0.3.5",
       "executable": "Dojo Raiders.exe",
-      "sha256": "651c0fef850e18c863ac2c9491e1e0c06af687efbf670adb87ba80d6f18e84f6",
-      "url": "https://github.com/Venturinii/vencade-downloads/releases/download/dojo-raiders-client-v0.1.2/Dojo-Raiders-Setup-0.1.2.exe"
+      "sha256": "8560869bb221936a356b25ac4b077cc7e3c08dfaaba2bc4840e4ebf70a9c1c6c",
+      "url": "https://github.com/Venturinii/vencade-downloads/releases/download/dojo-raiders-client-v0.1.3/Dojo-Raiders-Setup-0.1.3.exe"
     },
     "elevenCup": {
       "available": false
