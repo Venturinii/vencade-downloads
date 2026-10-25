@@ -11,7 +11,13 @@
       "url": "https://github.com/Venturinii/vencade-downloads/releases/download/dojo-raiders-client-v0.1.3/Dojo-Raiders-Setup-0.1.3.exe"
     },
     "elevenCup": {
-      "available": false
+      "available": true,
+      "packageFormat": "nsis",
+      "version": "0.1.0",
+      "minLauncherVersion": "0.3.11",
+      "executable": "Eleven Cup.exe",
+      "sha256": "708ade7c894c4f0cc9c465885eca21975f9a6d6b314cd4df6fa8ce67164e8683",
+      "url": "https://github.com/Venturinii/vencade-downloads/releases/download/eleven-cup-client-v0.1.0/Eleven-Cup-Setup-0.1.0.exe"
     }
   }
 }
